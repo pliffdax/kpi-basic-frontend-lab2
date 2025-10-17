@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>Степанов О.О., ІО-35 — ЛР2 (Таблиці)</title>
+  <meta name="description" content="ЛР2: Таблиця за варіантом (мерджі) + кольори перших двох рядків і hover.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Лабораторна робота №2</h1>
+
+  <h2>Завдання 2 — Таблиця</h2>
+
+  <table class="lab2">
+    <tr class="row1">
+      <td rowspan="2" colspan="2">Степанов</td>
+      <td>Олександр</td>
+      <td rowspan="2">Олександрович</td>
+      <td rowspan="2"></td>
+    </tr>
+
+    <tr class="row2">
+      <td>І</td>
+    </tr>
+
+    <tr>
+      <td>О</td>
+      <td rowspan="2">3</td>
+      <td rowspan="2">5</td>
+      <td rowspan="2" colspan="2">2</td>
+    </tr>
+
+    <tr>
+      <td>1</td>
+    </tr>
+  </table>
+
+  <h2>Завдання 2 — Зображення (світлофор)</h2>
+
+  <div class="traffic-row">
+    <div class="traffic-block">
+      <h3>Варіант 1 — реалізація через <code>position</code></h3>
+      <div class="traffic traffic--position">
+        <div class="case"></div>
+        <div class="lamp red"></div>
+        <div class="lamp yellow"></div>
+        <div class="lamp green"></div>
+      </div>
+    </div>
+
+    <div class="traffic-block">
+      <h3>Варіант 2 — реалізація через <code>transform</code></h3>
+      <div class="traffic traffic--transform">
+        <div class="case"></div>
+        <div class="lamp red"></div>
+        <div class="lamp yellow"></div>
+        <div class="lamp green"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

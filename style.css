@@ -1,0 +1,159 @@
+:root {
+  --c1: #018f8f;
+  --c2: #f5f501;
+  --t1: #ffffff;
+  --t2: #000000;
+
+  --traffic-w: 120px;
+  --traffic-h: 260px;
+  --lamp-d: 56px;
+
+  --case-bg: #d9d9d9;
+  --case-br: #111;
+  --lamp-br: #111;
+
+  --offset: 80px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  font-size: 20px;
+  margin: 0 0 12px;
+}
+
+table.lab2 {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 900px;
+  border: 1px solid #333;
+}
+
+.lab2 td {
+  border: 1px solid #333;
+  min-width: 90px;
+  height: 60px;
+  text-align: center;
+  vertical-align: middle;
+  background: #fafafa;
+}
+
+.lab2 .row1 td {
+  background: var(--c1);
+  color: var(--t1);
+}
+
+.lab2 .row2 td {
+  background: var(--c2);
+  color: var(--t2);
+}
+
+.lab2 .row1:hover td {
+  background: var(--c2);
+  color: var(--t2);
+}
+
+.lab2 .row2:hover td {
+  background: var(--c1);
+  color: var(--t1);
+}
+
+.traffic {
+  position: relative;
+  width: var(--traffic-w);
+  height: var(--traffic-h);
+  margin: 24px 0;
+}
+
+.traffic .case {
+  position: absolute;
+  inset: 0;
+  background: var(--case-bg);
+  border: 1px solid var(--case-br);
+  border-radius: 18px;
+}
+
+.traffic .lamp {
+  position: absolute;
+  width: var(--lamp-d);
+  height: var(--lamp-d);
+  border-radius: 50%;
+  border: 1px solid var(--lamp-br);
+  left: 50%;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05) inset;
+}
+
+.lamp.red {
+  background: #d9362c;
+}
+
+.lamp.yellow {
+  background: #eddc4a;
+}
+
+.lamp.green {
+  background: #40a55f;
+}
+
+.traffic--position .lamp.red {
+  top: 22px;
+  left: calc(50% - var(--lamp-d) / 2);
+}
+
+.traffic--position .lamp.yellow {
+  top: calc(50% - var(--lamp-d) / 2);
+  left: calc(50% - var(--lamp-d) / 2);
+}
+
+.traffic--position .lamp.green {
+  bottom: 22px;
+  left: calc(50% - var(--lamp-d) / 2);
+}
+
+.traffic--transform .lamp {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.traffic--transform .lamp.red {
+  transform: translate(-50%, calc(-50% - var(--offset)));
+}
+
+.traffic--transform .lamp.yellow {
+  transform: translate(-50%, -50%);
+}
+
+.traffic--transform .lamp.green {
+  transform: translate(-50%, calc(-50% + var(--offset)));
+}
+
+.traffic-row {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.traffic-block {
+  text-align: center;
+}
+
+.traffic-block h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.traffic-block code {
+  background: #eee;
+  padding: 1px 4px;
+  border-radius: 4px;
+  font-size: 14px;
+}
